@@ -15,7 +15,7 @@ export default function Home() {
 
   const bottomRef = useRef<HTMLDivElement | null>(null);
 
-  // 🔥 Load chat history
+  // useEffect() method that Loads chat history
   useEffect(() => {
     const saved = localStorage.getItem("chat_history");
     if (saved) setMessages(JSON.parse(saved));
